@@ -1,0 +1,81 @@
+<head>Rock, Paper, Scissors Game</head>
+<h1>Description of the Game</h1>
+<p> is a simple hand game with many names and variations.
+    The person that plays the strongest “object” is the winner of the game. 
+</p>
+<h2>Rules</h2>
+<ul>
+    <li>Game will be turn over 5 times</li>
+    <li></li>
+</ul>
+<body>
+    <script>
+ let score = 0;
+ function computerPlay(){
+                num = Math.floor(Math.random() * 3); //create random computer choice
+                if (num == 0){
+                    return "rock";
+                }
+                else if (num == 1){
+                    return  "paper";
+                }
+                else if (num ==2){ 
+                    return "scissors";
+                    }
+              
+            }
+            const computerSelection = computerPlay(); //store computer choice 
+
+            var playerSelection = prompt("Rock, paper, or scissors?").toLowerCase(); 
+            //prompt the user for their play
+        
+            function playRound(playerSelection, computerSelection, score){
+                if (playerSelection == "rock"){
+                    if (computerSelection == "scissors"){
+                        return "You win! Rock beats scissors.";
+                        score ++ ;
+                        console.log(score)
+                    }
+                    else if (computerSelection == "paper"){
+                        return "You lose! Paper beats rock.";
+                    }
+                    else if (computerSelection == "rock"){
+                        return "It's a tie!";
+                    }
+                } 
+                else if (playerSelection == "paper"){
+                    if (computerSelection == "paper"){
+                        return "It's a tie!";
+                    }
+                    else if (computerSelection == "rock"){
+                        return "You win! Paper beats rock.";
+                        score ++ ;
+                        console.log(score)
+                    }
+                    else if (computerSelection == "scissors"){
+                        return "You lose! Scissors beats paper";
+                    }
+                }
+                else if (playerSelection == "scissors"){
+                    if(computerSelection == "scissors"){
+                        return "It's a tie";
+                    }
+                    else if (computerSelection == "paper"){
+                        return "You win! Scissors beats paper";
+                        score ++ ;
+                        console.log(score)
+                    }
+                    else if (computerSelection == "rock"){
+                        return "You lose! Rock beats scissors.";
+                    }
+                }
+            }
+
+    console.log(playRound(playerSelection, computerSelection, score)); //calls function and print
+console.log(score)
+               
+ 
+                
+
+     </script>
+</body>
