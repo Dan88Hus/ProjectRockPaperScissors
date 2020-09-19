@@ -1,0 +1,18 @@
+html {
+    background: url('Rock-paper-scissors.svg') no-repeat fixed center; */
+    background-size: 40rem  ;
+}
+body {
+  text-align: left;
+}
+header {
+    font-style: italic;
+    font-size: 1rem;
+    font-weight: bolder;
+}
+
+#id {
+    background-color: grey;
+    border: grey;
+
+}
